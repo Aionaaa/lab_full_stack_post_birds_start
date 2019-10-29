@@ -31,7 +31,7 @@ const createRouter = function (collection) {
 
   router.post('/', (req, res) => {
     const newData = req.body;
-    collection.insertOne(newdata)
+    collection.insertOne(newData)
     .then((result) => {
       res.json(result.ops[0])
     })
@@ -42,7 +42,7 @@ const createRouter = function (collection) {
     });
   });
 
-  
+
 
   return router;
 };
